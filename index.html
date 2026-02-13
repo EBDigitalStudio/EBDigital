@@ -23,6 +23,23 @@
                     <h2 class="brand-title">EB DIGITAL STUDIO</h2>
                 </div>
             </a>
+            
+            <!-- MENÚ DE NAVEGACIÓN -->
+            <nav class="nav-menu" id="navMenu">
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#planes" class="nav-link">Planes</a></li>
+                    <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                    <li><a href="#proceso" class="nav-link">Proceso</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -30,7 +47,7 @@
     <main>
 
         <!-- HERO -->
-        <section class="hero">
+        <section class="hero" id="inicio">
             <div class="hero-background">
                 <div class="code-lines"></div>
                 <div class="floating-elements">
@@ -198,8 +215,257 @@
             </div>
         </section>
 
+        <!-- PLANES / PRECIOS -->
+        <section class="pricing" id="planes">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&lt;planes&gt;</span>
+                    <h2 class="section-title">Nuestros Planes Web</h2>
+                    <p class="section-description">Elegí el plan que mejor se adapte a tu negocio</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Plan Presencia Digital -->
+                    <div class="pricing-card" style="animation-delay: 0.1s">
+                        <div class="pricing-badge green">🟢</div>
+                        <h3 class="pricing-title">Plan Presencia Digital</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">200.000</span>
+                            <span class="price-currency">Gs</span>
+                        </div>
+                        <p class="pricing-payment">Pago único</p>
+                        <p class="pricing-description">Ideal para comenzar a tener presencia profesional en internet.</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ Diseño moderno adaptable a celular</li>
+                            <li>✓ Sección de presentación del negocio</li>
+                            <li>✓ Integración con redes sociales</li>
+                            <li>✓ Botón directo a WhatsApp</li>
+                            <li>✓ 1 sección tipo OnePage</li>
+                        </ul>
+                        
+                        <p class="pricing-ideal">👉 Perfecto para emprendedores que están comenzando.</p>
+                        
+                        <a href="https://wa.me/595991211207?text=Hola%2C%20me%20interesa%20el%20Plan%20Presencia%20Digital" class="btn btn-pricing" target="_blank">
+                            Consultar Plan
+                        </a>
+                    </div>
+
+                    <!-- Plan Profesional -->
+                    <div class="pricing-card" style="animation-delay: 0.2s">
+                        <div class="pricing-badge blue">🔵</div>
+                        <h3 class="pricing-title">Plan Profesional</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">400.000</span>
+                            <span class="price-currency">Gs</span>
+                        </div>
+                        <p class="pricing-payment">Pago único o financiado</p>
+                        <p class="pricing-description">Pensado para negocios que quieren generar confianza y recibir consultas constantes.</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ Diseño personalizado</li>
+                            <li>✓ Sección de servicios</li>
+                            <li>✓ Portafolio o galería</li>
+                            <li>✓ Formulario de contacto</li>
+                            <li>✓ Integración con correo</li>
+                            <li>✓ Botón de WhatsApp</li>
+                        </ul>
+                        
+                        <p class="pricing-ideal">👉 Ideal para profesionales, técnicos y servicios especializados.</p>
+                        
+                        <a href="https://wa.me/595991211207?text=Hola%2C%20me%20interesa%20el%20Plan%20Profesional" class="btn btn-pricing" target="_blank">
+                            Consultar Plan
+                        </a>
+                    </div>
+
+                    <!-- Plan Turnos & Reservas -->
+                    <div class="pricing-card" style="animation-delay: 0.3s">
+                        <div class="pricing-badge purple">🟣</div>
+                        <h3 class="pricing-title">Plan Turnos & Reservas</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">400.000</span>
+                            <span class="price-currency">Gs</span>
+                        </div>
+                        <p class="pricing-payment">Pago único o financiado</p>
+                        <p class="pricing-description">Automatiza tus citas y organiza tu negocio.</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ Sistema de reservas online</li>
+                            <li>✓ Calendario con horarios disponibles</li>
+                            <li>✓ Confirmación por correo</li>
+                            <li>✓ Botón de WhatsApp</li>
+                            <li>✓ Diseño adaptable a celular</li>
+                        </ul>
+                        
+                        <p class="pricing-ideal">👉 Ideal para peluquerías, consultorios y centros estéticos.</p>
+                        
+                        <a href="https://wa.me/595991211207?text=Hola%2C%20me%20interesa%20el%20Plan%20Turnos%20%26%20Reservas" class="btn btn-pricing" target="_blank">
+                            Consultar Plan
+                        </a>
+                    </div>
+
+                    <!-- Plan Catálogo Digital -->
+                    <div class="pricing-card featured" style="animation-delay: 0.4s">
+                        <div class="pricing-badge yellow">🟡</div>
+                        <div class="featured-badge">MÁS POPULAR</div>
+                        <h3 class="pricing-title">Plan Catálogo Digital</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">700.000</span>
+                            <span class="price-currency">Gs</span>
+                        </div>
+                        <p class="pricing-payment">Pago único o financiado</p>
+                        <p class="pricing-description">Muestra tus productos de forma profesional y ordenada.</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ Catálogo de productos o servicios</li>
+                            <li>✓ Hasta 5 secciones</li>
+                            <li>✓ Botón directo a WhatsApp</li>
+                            <li>✓ Integración con redes</li>
+                            <li>✓ Diseño moderno adaptable</li>
+                        </ul>
+                        
+                        <p class="pricing-ideal">👉 Ideal para tiendas y emprendimientos que quieren vender más.</p>
+                        
+                        <a href="https://wa.me/595991211207?text=Hola%2C%20me%20interesa%20el%20Plan%20Cat%C3%A1logo%20Digital" class="btn btn-pricing" target="_blank">
+                            Consultar Plan
+                        </a>
+                    </div>
+
+                    <!-- Landing Page de Conversión -->
+                    <div class="pricing-card" style="animation-delay: 0.5s">
+                        <div class="pricing-badge red">🔴</div>
+                        <h3 class="pricing-title">Landing Page de Conversión</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">Desde 700.000</span>
+                            <span class="price-currency">Gs</span>
+                        </div>
+                        <p class="pricing-payment">Consultar</p>
+                        <p class="pricing-description">Diseñada para campañas publicitarias y generación de clientes.</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✓ Título atractivo</li>
+                            <li>✓ Sección de beneficios</li>
+                            <li>✓ Testimonios</li>
+                            <li>✓ Llamados a la acción</li>
+                            <li>✓ Formulario optimizado</li>
+                        </ul>
+                        
+                        <p class="pricing-ideal">👉 Perfecta para anuncios en redes sociales.</p>
+                        
+                        <a href="https://wa.me/595991211207?text=Hola%2C%20me%20interesa%20el%20Plan%20Landing%20Page%20de%20Conversi%C3%B3n" class="btn btn-pricing" target="_blank">
+                            Consultar Plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTAFOLIO -->
+        <section class="portfolio" id="portafolio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">&lt;portafolio&gt;</span>
+                    <h2 class="section-title">Páginas Hechas por EB Digital Studio</h2>
+                    <p class="section-description">Algunos de nuestros trabajos realizados</p>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-card" style="animation-delay: 0.1s">
+                        <div class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <a href="https://evershopovers.github.io/EverShop/" target="_blank" class="btn-visit">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Visitar sitio
+                                </a>
+                            </div>
+                            <div class="portfolio-placeholder">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                    <path d="M21 15l-5-5L5 21"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>EverShop</h3>
+                            <p>Tienda online moderna y funcional</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">CSS</span>
+                                <span class="tech-badge">E-commerce</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" style="animation-delay: 0.2s">
+                        <div class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <a href="https://ebdigitalstudio.github.io/EBDigital/" target="_blank" class="btn-visit">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Visitar sitio
+                                </a>
+                            </div>
+                            <div class="portfolio-placeholder">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>EB Digital</h3>
+                            <p>Landing page corporativa profesional</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">HTML5</span>
+                                <span class="tech-badge">CSS3</span>
+                                <span class="tech-badge">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card" style="animation-delay: 0.3s">
+                        <div class="portfolio-image">
+                            <div class="portfolio-overlay">
+                                <a href="https://jorgetechpy.github.io/JorgeTech/" target="_blank" class="btn-visit">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                    Visitar sitio
+                                </a>
+                            </div>
+                            <div class="portfolio-placeholder">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>JorgeTech</h3>
+                            <p>Sitio web de servicios técnicos</p>
+                            <div class="portfolio-tech">
+                                <span class="tech-badge">HTML</span>
+                                <span class="tech-badge">CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- PROCESO -->
-        <section class="process">
+        <section class="process" id="proceso">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">&lt;proceso&gt;</span>
@@ -260,7 +526,7 @@
         </section>
 
         <!-- CONTACTO -->
-        <section class="contact">
+        <section class="contact" id="contacto">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">&lt;contacto&gt;</span>
@@ -338,6 +604,39 @@
     </footer>
 
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+// Mobile Menu Toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    navToggle.classList.toggle('active');
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        navToggle.classList.remove('active');
+    });
+});
+
+// Smooth scroll offset for fixed navbar
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
 </body>
 
 </html>
