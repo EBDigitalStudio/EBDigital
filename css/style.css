@@ -1680,3 +1680,7 @@ body {
         text-align: center;
     }
 }
+
+.demo-icon i {
+    color: var(--color-primary);
+}
