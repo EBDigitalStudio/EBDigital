@@ -987,106 +987,198 @@ body {
 }
 
 /* ======================
-   PORTFOLIO SECTION
+   PORTFOLIO SECTION — v2
 ====================== */
 
 .portfolio {
     padding: 100px 0;
-    background: var(--color-gray-light);
+    background: var(--color-white);
 }
 
+/* Grid: 2 columnas en desktop para las 4 tarjetas */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
     margin-top: 60px;
 }
 
+@media (min-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ── Tarjeta base ── */
 .portfolio-card {
     background: var(--color-white);
-    border-radius: 16px;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 2px solid transparent;
+    position: relative;
+    transition:
+        transform 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.38s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.3s ease;
     animation: fadeInUp 0.8s ease-out backwards;
 }
 
-.portfolio-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
+/* Línea degradada superior que aparece en hover */
+.portfolio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    opacity: 0;
+    transition: opacity 0.32s ease;
+    border-radius: 18px 18px 0 0;
+    z-index: 3;
 }
 
+/* Hover: elevación + sombra azul + borde + línea */
+.portfolio-card:hover {
+    transform: translateY(-14px);
+    box-shadow:
+        0 24px 52px rgba(0, 128, 221, 0.16),
+        0 6px 18px rgba(0, 0, 0, 0.07);
+    border-color: var(--color-primary);
+}
+
+.portfolio-card:hover::before {
+    opacity: 1;
+}
+
+/* ── Área de imagen ── */
 .portfolio-image {
     position: relative;
-    height: 250px;
-    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+    /* Relación 16:9 para que la captura landscape entre completa */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    background: #f1f5f9;
     overflow: hidden;
 }
 
-.portfolio-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.portfolio-overlay {
+/* Imagen real del proyecto */
+.portfolio-img-preview {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    /* contain: muestra la imagen completa sin recortar */
+    object-fit: contain;
+    object-position: center center;
+    background: #f1f5f9;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Zoom suave en la imagen al hacer hover */
+.portfolio-card:hover .portfolio-img-preview {
+    transform: scale(1.04);
+}
+
+/* Placeholder (detrás de la imagen real) */
+.portfolio-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #94a3b8;
+    z-index: 0;
+}
+
+.portfolio-placeholder span {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    font-family: var(--font-code);
+    color: #94a3b8;
+}
+
+/* Overlay con botón "Ver proyecto" */
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 14, 39, 0.72);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: var(--transition);
+    transition: opacity 0.32s ease;
+    z-index: 2;
+    backdrop-filter: blur(3px);
 }
 
 .portfolio-card:hover .portfolio-overlay {
     opacity: 1;
 }
 
+/* Botón "Ver proyecto" */
 .btn-visit {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     background: var(--color-white);
     color: var(--color-dark);
-    padding: 12px 24px;
+    padding: 11px 22px;
     border-radius: 10px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 700;
+    font-size: 0.9rem;
     transition: var(--transition);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    transform: translateY(8px);
+    opacity: 0;
+    transition:
+        transform 0.32s cubic-bezier(0.4, 0, 0.2, 1) 0.05s,
+        opacity 0.28s ease 0.05s,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.portfolio-card:hover .btn-visit {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .btn-visit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
     background: var(--color-secondary);
     color: var(--color-dark);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.35);
 }
 
+/* ── Info inferior de la tarjeta ── */
 .portfolio-info {
-    padding: 30px;
+    padding: 24px 28px 28px;
 }
 
-.portfolio-info h3 {
-    font-size: 1.375rem;
+.portfolio-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.portfolio-info-header h3 {
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--color-dark);
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .portfolio-info p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--color-gray);
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     line-height: 1.6;
 }
 
@@ -1094,6 +1186,23 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+/* Badge "En línea" */
+.portfolio-status {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.3px;
+}
+
+.portfolio-status.live {
+    color: #15803d;
+    background: rgba(22, 163, 74, 0.1);
+    border: 1px solid rgba(22, 163, 74, 0.25);
 }
 
 /* ======================
@@ -1679,6 +1788,8 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
+    /* Portfolio mobile — aspect-ratio se mantiene automáticamente */
 }
 
 .demo-icon i {
