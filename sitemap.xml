@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://ebdigitalstudio.github.io/EBDigital/</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-PY" href="https://ebdigitalstudio.github.io/EBDigital/"/>
+  </url>
+
+  <!-- Sección Servicios -->
+  <url>
+    <loc>https://ebdigitalstudio.github.io/EBDigital/#servicios</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sección Planes -->
+  <url>
+    <loc>https://ebdigitalstudio.github.io/EBDigital/#planes</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sección Demos -->
+  <url>
+    <loc>https://ebdigitalstudio.github.io/EBDigital/#demos</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Sección Portafolio -->
+  <url>
+    <loc>https://ebdigitalstudio.github.io/EBDigital/#portafolio</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sección Proceso -->
+  <url>
+    <loc>https://ebdigitalstudio.github.io/EBDigital/#proceso</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Sección Contacto -->
+  <url>
+    <loc>https://ebdigitalstudio.github.io/EBDigital/#contacto</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

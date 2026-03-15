@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloquear archivos que no necesitan indexarse
+Disallow: /css/
+Disallow: /js/
+Disallow: /img/
+
+# Sitemap
+Sitemap: https://ebdigitalstudio.github.io/EBDigital/sitemap.xml
